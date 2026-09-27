@@ -15,8 +15,6 @@ body {
 }
 
 
-/* ================= NAVBAR ================= */
-
 .navbar {
     position: fixed;
     top: 0;
@@ -88,34 +86,65 @@ body {
     background: #0565c7;
     transform: translateY(-2px);
 }
-
-
 .hero {
-    height: 100vh;
+    position: relative;
 
-    background:
-        linear-gradient(
-            rgba(0, 30, 60, 0.45),
-            rgba(0, 30, 60, 0.45)
-        ),
-        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b")
-        center/cover;
+    height: 100vh;
+    width: 100%;
 
     display: flex;
     align-items: center;
 
     padding-left: 8%;
 
+    overflow: hidden;
+
     color: white;
 }
 
+
+.hero-video {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+
+.video-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 25, 50, 0.50);
+
+    z-index: 1;
+}
+
+
 .hero-content {
+    position: relative;
+
+    z-index: 2;
+
     max-width: 650px;
 }
 
 .small-title {
     font-size: 13px;
     font-weight: bold;
+
     letter-spacing: 1px;
 
     margin-bottom: 15px;
@@ -123,6 +152,7 @@ body {
 
 .hero h1 {
     font-size: 58px;
+
     line-height: 1.1;
 
     margin-bottom: 20px;
@@ -130,12 +160,11 @@ body {
 
 .hero-content > p:not(.small-title) {
     font-size: 18px;
+
     line-height: 1.6;
 
     margin-bottom: 35px;
 }
-
-
 
 .section {
     padding: 90px 8%;
@@ -732,7 +761,7 @@ footer {
     line-height: 1.8;
 }
 
-.copyright {
+.last {
     margin-top: 40px;
 
     padding-top: 20px;
